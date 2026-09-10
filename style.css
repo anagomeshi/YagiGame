@@ -1,0 +1,111 @@
+html,body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #344861;
+    font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    box-sizing: border-box;
+}
+
+@supports(padding: env(safe-area-inset-left)) {
+    body {
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+    }
+}
+
+.app-chrome{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.header{
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header div{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.header span{
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+}
+
+.header img{
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.board{
+    flex: 1 0 0;
+    display: flex;
+    width: 100%;
+    min-height: 0;
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+.board-content{
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    height: max-content;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.board-row{
+    display: flex;
+    width: max-content;
+    height: max-content;
+    box-sizing: border-box;
+}
+
+.board-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    min-width: 5rem;
+    height: 5rem;
+    min-height: 5rem;
+    padding: 0;
+    margin: 2.5rem;
+    background-color: transparent;
+    border: 2px solid #344861;
+    border-radius: 2.5rem;
+    color: #344861;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    box-sizing: border-box;
+}
+
+.actual-answer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+    color: #e55c6c;
+    font-size: 2rem;
+    line-height: 2rem;
+    box-sizing: border-box;
+}
