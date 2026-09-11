@@ -66,6 +66,7 @@ html,body {
 .board-content{
     display: flex;
     flex-direction: column;
+    position: relative;
     width: max-content;
     height: max-content;
     margin: auto;
@@ -89,23 +90,55 @@ html,body {
     min-height: 5rem;
     padding: 0;
     margin: 2.5rem;
-    background-color: transparent;
+    background-color: #fff;
     border: 2px solid #344861;
     border-radius: 2.5rem;
     color: #344861;
     font-size: 2.5rem;
     line-height: 2.5rem;
     box-sizing: border-box;
+    z-index: 2;
 }
 
-.actual-answer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.board-button.selected{
+    background-color: #bbdefb;
+}
+
+.board-button.neighbor{
+    background-color: #e2ebf3;
+}
+
+.board-button.complete{
+    color: #94a3b7;
+}
+
+.connection-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 2rem;
-    color: #e55c6c;
-    font-size: 2rem;
-    line-height: 2rem;
+    height: 100%;
     box-sizing: border-box;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.connection-line {
+    stroke: #344861;
+    stroke-width: .5rem;
+    stroke-linecap: round;
+    pointer-events: none;
+}
+
+.clear-message {
+    margin-top: 20px;
+    color: #344861;
+    font-size: 30px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.clear-message.show {
+    opacity: 1;
 }
