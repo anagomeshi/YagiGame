@@ -1,5 +1,5 @@
-const boardWidth = 5;
-const boardHeight = 5;
+const boardWidth = 9;
+const boardHeight = 9;
 
 let board = [];
 let selectedCell = null;
@@ -347,12 +347,15 @@ function updateAllCellStates() {
 
 function checkClear() {
     const totalCells = boardWidth * boardHeight;
-    const message = document.querySelector(".clear-message");
+    const appMask = document.querySelector(".app-mask");
+    const popupContainer = document.querySelector(".clear-popup-container");
 
     if (completeCells.size === totalCells) {
-        message.classList.add("show");
+        appMask.classList.add("show");
+        popupContainer.classList.add("show");
     } else {
-        message.classList.remove("show");
+        appMask.classList.remove("show");
+        popupContainer.classList.remove("show");
     }
 }
 
